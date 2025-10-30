@@ -1,0 +1,89 @@
+<div class="container">
+	<nav class="navbar navbar-expand-lg bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand text-light" href="#">SISTEMA WEB</a>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a
+							class="nav-link active text-light"
+							aria-current="page"
+							href="#"
+						>Cadastrar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/consulta">Consultar</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="mb-3">
+		<h3>Editar - Agendamento de Potenciais Clientes</h3>
+		<p>Sistema utilizado para agendamento de serviços.</p>
+	</div>
+	{{#each post}}
+		{{#dataValues}}
+			<form action="/editar/{{id}}" method="POST">
+				<div class="mb-3">
+					<label for="nome" class="form-label">Nome: </label>
+					<input
+						type="text"
+						class="form-control"
+						id="nome"
+						name="nome"
+						value="{{nome}}"
+					/>
+				</div>
+				<div class="mb-3">
+					<label for="telefone" class="form-label">Telefone: </label>
+					<input
+						type="tel"
+						class="form-control"
+						id="telefone"
+						name="telefone"
+						value="{{telefone}}"
+					/>
+				</div>
+				<div class="mb-3">
+					<label for="origem" class="form-label">Origem: </label>
+					<select
+						class="form-select"
+						aria-label="Default select example"
+						name="origem"
+						id="origem"
+					>
+						<option value="celular" {{#if (eq origem "celular")}} selected {{/if}}>Celular</option>
+						<option value="computador" {{#if (eq origem "computador")}} selected {{/if}}>Computador</option>
+						<option value="tablet" {{#if (eq origem "tablet")}} selected {{/if}}>Tablet</option>
+					</select>
+				</div>
+
+				<div class="mb-3">
+					<label for="data_contato" class="form-label">Data do Contato: </label>
+					<input
+						type="date"
+						class="form-control"
+						id="data_contato"
+						name="data_contato"
+						value="{{data_contato}}"
+					/>
+				</div>
+
+				<div class="mb-3">
+					<label for="observacao" class="form-label">Observação: </label>
+					<input
+						type="text"
+						class="form-control"
+						id="observacao"
+						name="observacao"
+						value="{{observacao}}"
+					/>
+				</div>
+
+				<button type="submit" class="btn btn-primary">Enviar</button>
+			</form>
+		{{/dataValues}}
+	{{/each}}
+</div>

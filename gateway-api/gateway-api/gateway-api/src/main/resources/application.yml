@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: pessoa-service
+              uri: http://localhost:8081
+              predicates:
+                - Path=/api/pessoas/**
+              filters:
+                - StripPrefix=1

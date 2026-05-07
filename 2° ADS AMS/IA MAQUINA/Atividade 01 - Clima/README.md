@@ -75,7 +75,7 @@ A estrutura básica do projeto é composta por:
 📂 projeto-temperatura
  ┣ 📂 src
  ┃ ┣ 📜 Main.java
- ┃ ┣ 📜 temperaturaClima.java
+ ┃ ┣ 📜 temperaturaCidades.java
  ┃ ┗ 📜 ...
  ┣ 📜 README.md
  ┗ 📜 ...

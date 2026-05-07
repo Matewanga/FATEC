@@ -129,12 +129,6 @@ Clone o repositório:
 git clone URL_DO_REPOSITORIO
 ```
 
-Entre na pasta do projeto:
-
-```bash
-cd projeto-temperatura
-```
-
 ---
 
 # Compilando o Projeto

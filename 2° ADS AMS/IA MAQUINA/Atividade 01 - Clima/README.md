@@ -128,27 +128,6 @@ Clone o repositório:
 ```bash
 git clone URL_DO_REPOSITORIO
 ```
-
----
-
-# Compilando o Projeto
-
-Compile os arquivos Java utilizando:
-
-```bash
-javac Main.java
-```
-
----
-
-# Executando o Projeto
-
-Execute o programa utilizando:
-
-```bash
-java Main
-```
-
 ---
 
 # Objetivo Educacional
